@@ -138,8 +138,18 @@ app.delete('/api/admin/users/:id', authMiddleware, adminMiddleware, async (req, 
   }
 });
 
-// Start Server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Node.js Express Server running on http://localhost:${PORT}`);
+// Root route to prevent "Cannot GET /"
+app.get('/', (req, res) => {
+  res.send('User & Admin API is running!');
 });
+
+// Export for Vercel / Serverless & Start Server
+const PORT = process.env.PORT || 5000;
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Node.js Express Server running on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
+
