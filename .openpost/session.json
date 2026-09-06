@@ -4,8 +4,8 @@
       "id": "1788521241954yhmx",
       "tabKind": "request",
       "name": "New Request",
-      "method": "GET",
-      "url": "https://test-hosting-amber.vercel.app/api/user/profile",
+      "method": "POST",
+      "url": "https://test-hosting-amber.vercel.app/api/auth/register",
       "params": [],
       "headers": [
         {
@@ -20,7 +20,8 @@
         }
       ],
       "body": {
-        "type": "json"
+        "type": "json",
+        "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"user@example.com\",\n  \"password\": \"yourpassword\",\n  \"role\": \"user\" \n}\n"
       },
       "auth": {
         "type": "none"
@@ -40,27 +41,40 @@
       "certificateConfig": null,
       "inheritCertificate": false,
       "response": {
-        "status": 0,
-        "statusText": "Error",
-        "headers": {},
-        "body": "Request failed: Request with GET/HEAD method cannot have body.",
-        "time": 4,
-        "size": 0,
+        "status": 500,
+        "statusText": "",
+        "headers": {
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "98",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 06 Sep 2026 07:43:21 GMT",
+          "etag": "W/\"62-Y7/iOfbqthcPgT+QaC1D1Ne2/uk\"",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+          "x-powered-by": "Express",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sin1::iad1::qcfzd-1788680590933-bf6417539b7e"
+        },
+        "body": "{\"message\":\"Server error\",\"error\":\"Operation `users.findOne()` buffering timed out after 10000ms\"}",
+        "time": 11365,
+        "size": 98,
         "actualRequest": {
-          "method": "GET",
-          "url": "https://test-hosting-amber.vercel.app/api/user/profile",
+          "method": "POST",
+          "url": "https://test-hosting-amber.vercel.app/api/auth/register",
           "headers": {
             "Accept": "application/json",
             "Content-Type": "application/json"
           },
-          "body": "",
+          "body": "{\n  \"name\": \"John Doe\",\n  \"email\": \"user@example.com\",\n  \"password\": \"yourpassword\",\n  \"role\": \"user\" \n}\n",
+          "protocol": "HTTP/1.1",
           "certificateNames": "System Trust Store"
         },
         "cookies": [],
         "timingPhases": [
           {
             "name": "Environment",
-            "duration": 1
+            "duration": 0
           },
           {
             "name": "Auth",
@@ -68,7 +82,7 @@
           },
           {
             "name": "HTTP Request",
-            "duration": 4
+            "duration": 11365
           },
           {
             "name": "Post-processing",
@@ -101,6 +115,6 @@
   "responseTab": "body",
   "layoutMode": "horizontal",
   "splitRatio": 0.5,
-  "horizontalSplitRatio": 0.5,
+  "horizontalSplitRatio": 0.380118177432722,
   "selectedMockServerId": null
 }

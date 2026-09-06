@@ -9,13 +9,38 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Connect to MongoDB Atlas
+// Connect to MongoDB Atlas with connection caching for serverless environments
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://goldenbanana69x_db_user:3kVzlnkf3ye7Z2ob@cluster0.du5qhbe.mongodb.net/user_admin_db?retryWrites=true&w=majority';
 const JWT_SECRET = process.env.JWT_SECRET || 'secretkey123';
 
-mongoose.connect(MONGODB_URI)
-  .then(() => console.log('Connected successfully to MongoDB Atlas!'))
-  .catch(err => console.error('MongoDB Atlas Connection Error:', err));
+let isConnected = false;
+
+const connectDB = async () => {
+  if (isConnected && mongoose.connection.readyState === 1) {
+    return;
+  }
+  try {
+    const db = await mongoose.connect(MONGODB_URI, {
+      bufferCommands: false, // Disable buffering so errors surface immediately if disconnected
+      serverSelectionTimeoutMS: 5000,
+    });
+    isConnected = db.connections[0].readyState === 1;
+    console.log('Connected successfully to MongoDB Atlas!');
+  } catch (err) {
+    console.error('MongoDB Atlas Connection Error:', err);
+    throw err;
+  }
+};
+
+// Middleware to ensure DB connection per serverless request
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    res.status(500).json({ message: 'Database connection error', error: err.message });
+  }
+});
 
 // User Schema
 const userSchema = new mongoose.Schema({
