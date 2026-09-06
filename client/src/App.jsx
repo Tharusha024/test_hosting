@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-// Dynamic API URL for local dev & hosted deployment (strips trailing slash automatically)
+// Dynamic API URL for local dev & hosted deployment
 const rawApiBase = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
 const API_BASE = rawApiBase.replace(/\/+$/, '');
-
 
 export default function App() {
   const [isLogin, setIsLogin] = useState(true);

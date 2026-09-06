@@ -1,0 +1,41 @@
+[
+  {
+    "id": "1788521378633",
+    "timestamp": 1788521378633,
+    "request": {
+      "id": "1788521378627",
+      "name": "New Request",
+      "method": "GET",
+      "url": "https://test-hosting-amber.vercel.app/api/user/profile",
+      "params": [],
+      "headers": [
+        {
+          "key": "Accept",
+          "value": "application/json",
+          "enabled": true
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/json",
+          "enabled": true
+        }
+      ],
+      "body": {
+        "type": "json"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "inheritAuth": true
+    },
+    "response": {
+      "status": 0,
+      "statusText": "Error",
+      "headers": {},
+      "body": "Request failed: Request with GET/HEAD method cannot have body.",
+      "time": 4,
+      "size": 0,
+      "cookies": []
+    }
+  }
+]
