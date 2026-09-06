@@ -2,7 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "build": "cd client && npm install && npm run build"
+    "build": "npm install --prefix client && npm run build --prefix client"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
