@@ -297,5 +297,109 @@
       "size": 212,
       "cookies": []
     }
+  },
+  {
+    "id": "1788680957521",
+    "timestamp": 1788680957521,
+    "request": {
+      "id": "1788680955663",
+      "name": "New Request",
+      "method": "POST",
+      "url": "https://test-hosting-amber.vercel.app/api/auth/register",
+      "params": [],
+      "headers": [
+        {
+          "key": "Accept",
+          "value": "application/json",
+          "enabled": true
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/json",
+          "enabled": true
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"user@example.com\",\n  \"password\": \"yourpassword\",\n  \"role\": \"user\" \n}\n"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "inheritAuth": true
+    },
+    "response": {
+      "status": 500,
+      "statusText": "",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-length": "342",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 06 Sep 2026 07:49:17 GMT",
+        "etag": "W/\"156-FFaVnEPWnKOnltDf+Fd6Xi2qwEs\"",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-powered-by": "Express",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "sin1::iad1::gnvvb-1788680956278-fdef57be272b"
+      },
+      "body": "{\"message\":\"Database connection failed\",\"error\":\"Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/\"}",
+      "time": 1856,
+      "size": 342,
+      "cookies": []
+    }
+  },
+  {
+    "id": "1788681274564",
+    "timestamp": 1788681274564,
+    "request": {
+      "id": "1788681269489",
+      "name": "New Request",
+      "method": "POST",
+      "url": "https://test-hosting-amber.vercel.app/api/auth/register",
+      "params": [],
+      "headers": [
+        {
+          "key": "Accept",
+          "value": "application/json",
+          "enabled": true
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/json",
+          "enabled": true
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"user@example.com\",\n  \"password\": \"yourpassword\",\n  \"role\": \"user\" \n}\n"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "inheritAuth": true
+    },
+    "response": {
+      "status": 201,
+      "statusText": "",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-length": "361",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 06 Sep 2026 07:54:34 GMT",
+        "etag": "W/\"169-grR81OaDy7LdLxT1afvGTK7+Yfg\"",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-powered-by": "Express",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "sin1::iad1::vdr5v-1788681270508-c726cacbead7"
+      },
+      "body": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOWQxYzNhNDNjYjZjYmQ3NDEzN2ZjNSIsInJvbGUiOiJ1c2VyIiwibmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJ1c2VyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzg4NjgxMjc0LCJleHAiOjE3ODg3Njc2NzR9.oKRsO_vGhQdenzX9wYTxcO4RAvkj4snMkPfPLq3ApYQ\",\"user\":{\"id\":\"6a9d1c3a43cb6cbd74137fc5\",\"name\":\"John Doe\",\"email\":\"user@example.com\",\"role\":\"user\"}}",
+      "time": 4982,
+      "size": 361,
+      "cookies": []
+    }
   }
 ]

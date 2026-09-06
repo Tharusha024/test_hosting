@@ -41,24 +41,24 @@
       "certificateConfig": null,
       "inheritCertificate": false,
       "response": {
-        "status": 500,
+        "status": 201,
         "statusText": "",
         "headers": {
           "access-control-allow-origin": "*",
           "cache-control": "public, max-age=0, must-revalidate",
-          "content-length": "212",
+          "content-length": "361",
           "content-type": "application/json; charset=utf-8",
-          "date": "Sun, 06 Sep 2026 07:45:20 GMT",
-          "etag": "W/\"d4-VimG65dvwreC1fUa1K2pwRaABXE\"",
+          "date": "Sun, 06 Sep 2026 07:54:34 GMT",
+          "etag": "W/\"169-grR81OaDy7LdLxT1afvGTK7+Yfg\"",
           "server": "Vercel",
           "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
           "x-powered-by": "Express",
           "x-vercel-cache": "MISS",
-          "x-vercel-id": "sin1::iad1::jn587-1788680720218-00f421764d7a"
+          "x-vercel-id": "sin1::iad1::vdr5v-1788681270508-c726cacbead7"
         },
-        "body": "{\"message\":\"Server error\",\"error\":\"Cannot call `users.findOne()` before initial connection is complete if `bufferCommands = false`. Make sure you `await mongoose.connect()` if you have `bufferCommands = false`.\"}",
-        "time": 962,
-        "size": 212,
+        "body": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOWQxYzNhNDNjYjZjYmQ3NDEzN2ZjNSIsInJvbGUiOiJ1c2VyIiwibmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJ1c2VyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzg4NjgxMjc0LCJleHAiOjE3ODg3Njc2NzR9.oKRsO_vGhQdenzX9wYTxcO4RAvkj4snMkPfPLq3ApYQ\",\"user\":{\"id\":\"6a9d1c3a43cb6cbd74137fc5\",\"name\":\"John Doe\",\"email\":\"user@example.com\",\"role\":\"user\"}}",
+        "time": 4982,
+        "size": 361,
         "actualRequest": {
           "method": "POST",
           "url": "https://test-hosting-amber.vercel.app/api/auth/register",
@@ -82,7 +82,7 @@
           },
           {
             "name": "HTTP Request",
-            "duration": 962
+            "duration": 4982
           },
           {
             "name": "Post-processing",
