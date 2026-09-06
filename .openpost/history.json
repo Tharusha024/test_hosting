@@ -245,5 +245,57 @@
       "size": 98,
       "cookies": []
     }
+  },
+  {
+    "id": "1788680720822",
+    "timestamp": 1788680720822,
+    "request": {
+      "id": "1788680719858",
+      "name": "New Request",
+      "method": "POST",
+      "url": "https://test-hosting-amber.vercel.app/api/auth/register",
+      "params": [],
+      "headers": [
+        {
+          "key": "Accept",
+          "value": "application/json",
+          "enabled": true
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/json",
+          "enabled": true
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"user@example.com\",\n  \"password\": \"yourpassword\",\n  \"role\": \"user\" \n}\n"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "inheritAuth": true
+    },
+    "response": {
+      "status": 500,
+      "statusText": "",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-length": "212",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 06 Sep 2026 07:45:20 GMT",
+        "etag": "W/\"d4-VimG65dvwreC1fUa1K2pwRaABXE\"",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-powered-by": "Express",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "sin1::iad1::jn587-1788680720218-00f421764d7a"
+      },
+      "body": "{\"message\":\"Server error\",\"error\":\"Cannot call `users.findOne()` before initial connection is complete if `bufferCommands = false`. Make sure you `await mongoose.connect()` if you have `bufferCommands = false`.\"}",
+      "time": 962,
+      "size": 212,
+      "cookies": []
+    }
   }
 ]

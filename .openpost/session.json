@@ -46,19 +46,19 @@
         "headers": {
           "access-control-allow-origin": "*",
           "cache-control": "public, max-age=0, must-revalidate",
-          "content-length": "98",
+          "content-length": "212",
           "content-type": "application/json; charset=utf-8",
-          "date": "Sun, 06 Sep 2026 07:43:21 GMT",
-          "etag": "W/\"62-Y7/iOfbqthcPgT+QaC1D1Ne2/uk\"",
+          "date": "Sun, 06 Sep 2026 07:45:20 GMT",
+          "etag": "W/\"d4-VimG65dvwreC1fUa1K2pwRaABXE\"",
           "server": "Vercel",
           "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
           "x-powered-by": "Express",
           "x-vercel-cache": "MISS",
-          "x-vercel-id": "sin1::iad1::qcfzd-1788680590933-bf6417539b7e"
+          "x-vercel-id": "sin1::iad1::jn587-1788680720218-00f421764d7a"
         },
-        "body": "{\"message\":\"Server error\",\"error\":\"Operation `users.findOne()` buffering timed out after 10000ms\"}",
-        "time": 11365,
-        "size": 98,
+        "body": "{\"message\":\"Server error\",\"error\":\"Cannot call `users.findOne()` before initial connection is complete if `bufferCommands = false`. Make sure you `await mongoose.connect()` if you have `bufferCommands = false`.\"}",
+        "time": 962,
+        "size": 212,
         "actualRequest": {
           "method": "POST",
           "url": "https://test-hosting-amber.vercel.app/api/auth/register",
@@ -74,7 +74,7 @@
         "timingPhases": [
           {
             "name": "Environment",
-            "duration": 0
+            "duration": 1
           },
           {
             "name": "Auth",
@@ -82,7 +82,7 @@
           },
           {
             "name": "HTTP Request",
-            "duration": 11365
+            "duration": 962
           },
           {
             "name": "Post-processing",
